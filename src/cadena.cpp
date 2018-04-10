@@ -82,7 +82,6 @@ void insertar_segmento_despues(cadena_t &sgm, localizador_t loc, cadena_t &cad) 
         cad->final = sgm->final;
       else
         loc->siguiente->anterior = sgm->final;
-
       loc->siguiente = sgm->inicio;
     }
   }
@@ -261,13 +260,13 @@ bool es_inicio_cadena(localizador_t loc, cadena_t cad) {
   Si es_vacia_cadena (cad) devuelve `false'.
  */
 bool localizador_en_cadena(localizador_t loc, cadena_t cad) {
-  if (es_vacia_cadena(cad))
+  if(es_vacia_cadena(cad))
     return false;
   else {
-    while (cad->inicio != NULL && loc != cad->inicio) {
-      cad->inicio = cad->inicio->siguiente;
-    }
-    return cad->inicio == NULL;
+    localizador_t indice = inicio_cadena(cad);
+    while (es_localizador(indice) && indice != loc)
+      indice = siguiente(indice,cad);
+    return es_localizador(indice);
   }
 }
 
@@ -289,8 +288,13 @@ bool precede_en_cadena(localizador_t loc1, localizador_t loc2, cadena_t cad) {
   Si es_vacia_cadena(cad) devuelve un localizador_t no válido.
  */
 localizador_t inicio_cadena(cadena_t cad){
-  localizador_t inicio = cad->inicio;
-  return inicio;
+  localizador_t res;
+  if(es_vacia_cadena(cad))
+    res = NULL;
+  else{
+    res = cad->inicio;
+  }
+  return res;
 }
 
 /*
@@ -298,8 +302,12 @@ localizador_t inicio_cadena(cadena_t cad){
   Si es_vacia_cadena(cad) devuelve un localizador_t no válido.
  */
 localizador_t final_cadena(cadena_t cad){
-  localizador_t final = cad->final;
-  return final;
+  localizador_t res;
+  if(es_vacia_cadena(cad))
+    res = NULL;
+  else
+    res = cad->final;
+  return res;
 }
 
 /*
@@ -333,13 +341,12 @@ localizador_t kesimo(nat k, cadena_t cad){
   Precondición: localizador_en_cadena(loc, cad).
  */
 localizador_t siguiente(localizador_t loc, cadena_t cad) {
-  localizador_t resultado = NULL;
-  if(es_vacia_cadena(cad) || es_final_cadena(loc,cad))
-    return resultado;
-  else {
-    resultado = loc->siguiente;
-    return resultado;
-  }
+  localizador_t res;
+  if (es_final_cadena(loc,cad))
+    res = NULL;
+  else
+    res = loc->siguiente;
+  return res;
 }
 
 /*
@@ -349,13 +356,12 @@ localizador_t siguiente(localizador_t loc, cadena_t cad) {
   Precondición: localizador_en_cadena(loc, cad).
  */
 localizador_t anterior(localizador_t loc, cadena_t cad){
-  localizador_t resultado = NULL;
-  if(es_vacia_cadena(cad) || es_inicio_cadena(loc, cad))
-    return resultado;
-  else {
-    resultado = loc->anterior;
-    return resultado;
-  }
+  localizador_t res;
+  if (es_inicio_cadena(loc,cad))
+    res = NULL;
+  else
+    res = loc->anterior;
+  return res;
 }
 
 /*
@@ -420,8 +426,7 @@ localizador_t anterior_clave(int clave, localizador_t loc, cadena_t cad){
   Precondición: localizador_en_cadena(loc, cad).
  */
 info_t info_cadena(localizador_t loc, cadena_t cad){
-  info_t resultado = copia_info(loc->dato);
-  return resultado;
+  return loc->dato;
 }
 
 /* Modificadoras */
@@ -461,11 +466,12 @@ void imprimir_cadena(cadena_t cad){
   if(es_vacia_cadena(cad))
     printf("\n");
   else{
-    while(cad->inicio != NULL){
-      int numero = numero_info(info_cadena(cad->inicio,cad));
-      char *frase = frase_info(info_cadena(cad->inicio,cad));
+    localizador_t loc = inicio_cadena(cad);
+    while(loc != NULL){
+      int numero = numero_info(info_cadena(loc,cad));
+      char *frase = frase_info(info_cadena(loc,cad));
       printf("(%i,%s)", numero, frase);
-      cad->inicio = cad->inicio->siguiente;
+      loc = siguiente(loc,cad);
     }
     printf("\n");
   }

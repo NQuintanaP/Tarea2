@@ -89,7 +89,7 @@ cadena_t concatenar(cadena_t c1, cadena_t c2) {
 void ordenar(cadena_t &cad){
   if(!es_vacia_cadena(cad) && !esta_ordenada(cad)){
     localizador_t loc = inicio_cadena(cad);
-    while (es_localizador(loc)){
+    while (es_localizador(loc) && es_localizador(siguiente(loc,cad))){
       if(numero_info(info_cadena(loc,cad)) > numero_info(info_cadena(siguiente(loc,cad),cad)))
         intercambiar(loc, siguiente(loc,cad), cad);
       loc = siguiente(loc,cad);

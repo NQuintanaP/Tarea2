@@ -1,0 +1,66 @@
+==5161== Invalid write of size 8
+==5161==    at 0x4027AE: remover_de_cadena(nodo*&, rep_cadena*&) (cadena.cpp:177)
+==5161==    by 0x401054: main (principal.cpp:158)
+==5161==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==5161== 
+==5161== 
+==5161== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==5161==  Access not within mapped region at address 0x8
+==5161==    at 0x4027AE: remover_de_cadena(nodo*&, rep_cadena*&) (cadena.cpp:177)
+==5161==    by 0x401054: main (principal.cpp:158)
+==5161==  If you believe this happened as a result of a stack
+==5161==  overflow in your program's main thread (unlikely but
+==5161==  possible), you can try to increase the size of the
+==5161==  main thread stack using the --main-stacksize= flag.
+==5161==  The main thread stack size used in this run was 8388608.
+1>#  prueba de siguiente, anterior, es_inicio_cadena, es_final_cadena, remover_de_cadena, insertar_antes, pertenece, longitud.
+2>Insertado al final.
+3>Insertado al final.
+4>Insertado al final.
+5>Insertado al final.
+6>Insertado al final.
+7>loc al inicio.
+8>loc al siguiente.
+9>(2,b)
+10>loc al anterior.
+11>(1,a)
+12>loc al siguiente.
+13>loc al siguiente.
+14>(3,c)
+15>loc al siguiente.
+16>loc válido.
+17>loc al final.
+18>loc al anterior.
+19>(4,d)
+20>loc al siguiente.
+21>(5,e)
+22>loc al siguiente.
+23>Localizador no válido.
+24>loc no válido.
+25>(1,a)(2,b)(3,c)(4,d)(5,e)
+26>loc al inicio.
+27>loc es incio de cad.
+28>loc no es final de cad.
+29>loc al final.
+30>loc no es incio de cad.
+31>loc es final de cad.
+32>(1,a)(2,b)(3,c)(4,d)(5,e)
+33>Insertado al final.
+34>loc en la posición 3.
+35>Removido.
+36>(5,e)(4,e)
+37>loc al inicio.
+38>Removido.
+39>(4,e)
+40>loc al final.
+41>==5161== 36 (32 direct, 4 indirect) bytes in 2 blocks are definitely lost in loss record 6 of 9
+==5161==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==5161==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==5161==    by 0x402111: leer_info(int) (info.cpp:101)
+==5161==    by 0x400B89: main (principal.cpp:92)
+==5161== 
+==5161== 126 (24 direct, 102 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 9
+==5161==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==5161==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==5161==    by 0x400BA3: main (principal.cpp:93)
+==5161== 
