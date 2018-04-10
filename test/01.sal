@@ -1,0 +1,21 @@
+principal: src/cadena.cpp:42: void insertar_al_final(info_t, rep_cadena*&): Assertion `cad->inicio != NULL' failed.
+1>#  prueba de es_vacia_cadena, insertar_al_final, imprimir_cadena, esta_ordenada, mezcla, son_iguales, ordenar.
+2>cad vacia.
+3>
+4>Insertado al final.
+5>cad no vacia.
+6>(1,a)
+7>==7385== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 8
+==7385==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==7385==    by 0x401D9B: copia_info(rep_info*) (info.cpp:30)
+==7385==    by 0x402F50: info_cadena(nodo*, rep_cadena*) (cadena.cpp:423)
+==7385==    by 0x403033: imprimir_cadena(rep_cadena*) (cadena.cpp:465)
+==7385==    by 0x401980: main (principal.cpp:289)
+==7385== 
+==7385== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 8
+==7385==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==7385==    by 0x401D9B: copia_info(rep_info*) (info.cpp:30)
+==7385==    by 0x402F50: info_cadena(nodo*, rep_cadena*) (cadena.cpp:423)
+==7385==    by 0x403054: imprimir_cadena(rep_cadena*) (cadena.cpp:466)
+==7385==    by 0x401980: main (principal.cpp:289)
+==7385== 
