@@ -150,14 +150,25 @@ cadena_t separar_segmento(localizador_t desde, localizador_t hasta, cadena_t &ca
  */
 cadena_t mezcla(cadena_t c1, cadena_t c2) {
   cadena_t resultado = crear_cadena();
-  while (c1->inicio != NULL || c2->inicio != NULL){
-    if(c2->inicio == NULL || numero_info(c1->inicio->dato) <= numero_info(c2->inicio->dato)){
-      insertar_al_final(copia_info(c1->inicio->dato),resultado);
-      c1->inicio = siguiente(inicio_cadena(c1),c1);
+  localizador_t loc1 = inicio_cadena(c1);
+  localizador_t loc2 = inicio_cadena(c2);
+  while (es_localizador(loc1) || es_localizador(loc2)){
+    if(es_localizador(loc1) && !es_localizador(loc2)){
+      insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
+      loc1 = siguiente(loc1,c1);
     }
-    else if(c1->inicio == NULL || numero_info(c1->inicio->dato) > numero_info(c2->inicio->dato)){
-      insertar_al_final(copia_info(c2->inicio->dato),resultado);
-      c2->inicio = siguiente(inicio_cadena(c2),c2);
+    else if(!es_localizador(loc1) && es_localizador(loc2)){
+      insertar_al_final(copia_info(info_cadena(loc2,c2)),resultado);
+      loc2 = siguiente(loc2,c2);
+    }
+    else {
+      if (numero_info(info_cadena(loc1,c1)) <= numero_info(info_cadena(loc2,c2))){
+        insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
+        loc1 = siguiente(loc1,c1);
+      } else {
+        insertar_al_final(copia_info(info_cadena(loc2,c2)),resultado);
+        loc2 = siguiente(loc2,c2);
+      }
     }
   }
   return resultado;

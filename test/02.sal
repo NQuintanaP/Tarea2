@@ -37,8 +37,8 @@
 37>loc no pertenece a cad.
 38>
 39>Fin.
-==5157== 126 (24 direct, 102 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==5157==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
-==5157==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
-==5157==    by 0x400BA3: main (principal.cpp:93)
-==5157== 
+==5717== 126 (24 direct, 102 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==5717==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==5717==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==5717==    by 0x400BA3: main (principal.cpp:93)
+==5717== 
