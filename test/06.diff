@@ -1,0 +1,19 @@
+30a31,48
+> ==10302== 16 bytes in 1 blocks are definitely lost in loss record 1 of 3
+> ==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+> ==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+> ==10302==    by 0x402111: leer_info(int) (info.cpp:101)
+> ==10302==    by 0x401814: main (principal.cpp:268)
+> ==10302== 
+> ==10302== 32 bytes in 2 blocks are definitely lost in loss record 2 of 3
+> ==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+> ==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+> ==10302==    by 0x40373E: cambiar_todos(int, int, rep_cadena*&) (uso_cadena.cpp:107)
+> ==10302==    by 0x401BA9: main (principal.cpp:321)
+> ==10302== 
+> ==10302== 48 bytes in 3 blocks are definitely lost in loss record 3 of 3
+> ==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+> ==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+> ==10302==    by 0x402111: leer_info(int) (info.cpp:101)
+> ==10302==    by 0x400B89: main (principal.cpp:92)
+> ==10302== 

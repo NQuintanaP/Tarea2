@@ -63,19 +63,19 @@ cadena_t concatenar(cadena_t c1, cadena_t c2) {
   else{
     localizador_t loc1 = inicio_cadena(c1);
     localizador_t loc2 = inicio_cadena(c2);
-    while(es_localizador(loc1) && es_localizador(loc2)){
-      if(es_vacia_cadena(c1)){
-        while (es_localizador(loc2)){
-          insertar_al_final(copia_info(info_cadena(loc2,c2)),resultado);
-          loc2 = siguiente(loc2,c2);
-        }
-      } else {
-        while (es_localizador(loc1)){
-          insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
-          loc1 = siguiente(loc1,c1);
-        }
+    // while (es_localizador(loc1) || es_localizador(loc2)){
+    //
+    // }
+    if(es_localizador(loc1))
+      while(es_localizador(loc1)){
+        insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
+        loc1 = siguiente(loc1,c1);
       }
-    }
+    if(es_localizador(loc2))
+      while(es_localizador(loc2)){
+        insertar_al_final(copia_info(info_cadena(loc2,c2)),resultado);
+        loc2 = siguiente(loc2,c2);
+      }
     return resultado;
   }
 }
@@ -90,7 +90,7 @@ void ordenar(cadena_t &cad){
   if(!es_vacia_cadena(cad) && !esta_ordenada(cad)){
     localizador_t loc = inicio_cadena(cad);
     while (es_localizador(loc) && es_localizador(siguiente(loc,cad))){
-      intercambiar(loc, menor_en_cadena(loc,cad), cad);
+      intercambiar(loc,menor_en_cadena(loc,cad),cad);
       loc = siguiente(loc,cad);
     }
   }
@@ -125,7 +125,7 @@ cadena_t subcadena(int menor, int mayor, cadena_t cad) {
   localizador_t loc = inicio_cadena(cad);
   while (es_localizador(loc)){
     if(numero_info(info_cadena(loc,cad)) >= menor && numero_info(info_cadena(loc,cad)) <= mayor)
-      insertar_al_final(copia_info(info_cadena(loc,cad)),cad);
+      insertar_al_final(copia_info(info_cadena(loc,cad)),resultado);
     loc = siguiente(loc,cad);
   }
   return resultado;

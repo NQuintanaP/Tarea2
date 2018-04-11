@@ -1,51 +1,7 @@
-0a1,15
-> ==5721== Invalid write of size 8
-> ==5721==    at 0x40287F: remover_de_cadena(nodo*&, rep_cadena*&) (cadena.cpp:188)
-> ==5721==    by 0x401054: main (principal.cpp:158)
-> ==5721==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
-> ==5721== 
-> ==5721== 
-> ==5721== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-> ==5721==  Access not within mapped region at address 0x8
-> ==5721==    at 0x40287F: remover_de_cadena(nodo*&, rep_cadena*&) (cadena.cpp:188)
-> ==5721==    by 0x401054: main (principal.cpp:158)
-> ==5721==  If you believe this happened as a result of a stack
-> ==5721==  overflow in your program's main thread (unlikely but
-> ==5721==  possible), you can try to increase the size of the
-> ==5721==  main thread stack using the --main-stacksize= flag.
-> ==5721==  The main thread stack size used in this run was 8388608.
-36c51
-< 36>(1,a)(2,b)(4,d)(5,e)(4,e)
----
-> 36>(5,e)(4,e)
-39c54
-< 39>(2,b)(4,d)(5,e)(4,e)
----
-> 39>(4,e)
-41,54c56,66
-< 41>Removido.
-< 42>(2,b)(4,d)(5,e)
-< 43>Longitud: 3
-< 44>3 no pertenece a cad.
-< 45>loc al inicio.
-< 46>Insertado antes de loc.
-< 47>loc en la posición 3.
-< 48>Insertado antes de loc.
-< 49>(1,a)(2,b)(3,c)(4,d)(5,e)
-< 50>Longitud: 5
-< 51>1 pertenece a cad.
-< 52>10 no pertenece a cad.
-< 53>(1,a)(2,b)(3,c)(4,d)(5,e)
-< 54>Fin.
----
-> 41>==5721== 36 (32 direct, 4 indirect) bytes in 2 blocks are definitely lost in loss record 6 of 9
-> ==5721==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
-> ==5721==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
-> ==5721==    by 0x402111: leer_info(int) (info.cpp:101)
-> ==5721==    by 0x400B89: main (principal.cpp:92)
-> ==5721== 
-> ==5721== 126 (24 direct, 102 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 9
-> ==5721==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
-> ==5721==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
-> ==5721==    by 0x400BA3: main (principal.cpp:93)
-> ==5721== 
+54a55,60
+> ==10290== 54 (48 direct, 6 indirect) bytes in 3 blocks are definitely lost in loss record 2 of 2
+> ==10290==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+> ==10290==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+> ==10290==    by 0x402111: leer_info(int) (info.cpp:101)
+> ==10290==    by 0x400B89: main (principal.cpp:92)
+> ==10290== 

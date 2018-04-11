@@ -1,0 +1,1107 @@
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x403225: imprimir_cadena(rep_cadena*) (cadena.cpp:488)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x40322D: imprimir_cadena(rep_cadena*) (cadena.cpp:488)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x403243: imprimir_cadena(rep_cadena*) (cadena.cpp:489)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E56: frase_info(rep_info*) (info.cpp:45)
+==10306==    by 0x40324B: imprimir_cadena(rep_cadena*) (cadena.cpp:489)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28d38 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C32BC2: __strlen_sse2 (vg_replace_strmem.c:460)
+==10306==    by 0x5784985: vfprintf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x578C285: printf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x403267: imprimir_cadena(rep_cadena*) (cadena.cpp:490)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28ce0 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C32BD4: __strlen_sse2 (vg_replace_strmem.c:460)
+==10306==    by 0x5784985: vfprintf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x578C285: printf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x403267: imprimir_cadena(rep_cadena*) (cadena.cpp:490)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28ce1 is 1 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C37048: mempcpy (vg_replace_strmem.c:1524)
+==10306==    by 0x57B2C33: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x57844DA: vfprintf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x578C285: printf (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x403267: imprimir_cadena(rep_cadena*) (cadena.cpp:490)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28ce0 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x40327A: imprimir_cadena(rep_cadena*) (cadena.cpp:491)
+==10306==    by 0x401980: main (principal.cpp:289)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid write of size 8
+==10306==    at 0x402427: insertar_segmento_despues(rep_cadena*&, nodo*, rep_cadena*&) (cadena.cpp:85)
+==10306==    by 0x400CD0: main (principal.cpp:110)
+==10306==  Address 0x5b28d88 is 8 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x402B82: esta_ordenada(rep_cadena*) (cadena.cpp:244)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x402B8A: esta_ordenada(rep_cadena*) (cadena.cpp:244)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402B1F: esta_ordenada(rep_cadena*) (cadena.cpp:242)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402B4E: esta_ordenada(rep_cadena*) (cadena.cpp:243)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x402B65: esta_ordenada(rep_cadena*) (cadena.cpp:244)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x402B6D: esta_ordenada(rep_cadena*) (cadena.cpp:244)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402BAF: esta_ordenada(rep_cadena*) (cadena.cpp:247)
+==10306==    by 0x401C03: main (principal.cpp:327)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x4037CD: subcadena(int, int, rep_cadena*) (uso_cadena.cpp:127)
+==10306==    by 0x401C91: main (principal.cpp:331)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x4037D5: subcadena(int, int, rep_cadena*) (uso_cadena.cpp:127)
+==10306==    by 0x401C91: main (principal.cpp:331)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x4037ED: subcadena(int, int, rep_cadena*) (uso_cadena.cpp:127)
+==10306==    by 0x401C91: main (principal.cpp:331)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x4037F5: subcadena(int, int, rep_cadena*) (uso_cadena.cpp:127)
+==10306==    by 0x401C91: main (principal.cpp:331)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x40384A: subcadena(int, int, rep_cadena*) (uso_cadena.cpp:129)
+==10306==    by 0x401C91: main (principal.cpp:331)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x402F81: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x40157F: main (principal.cpp:231)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x402F89: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x40157F: main (principal.cpp:231)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402F4B: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:394)
+==10306==    by 0x40157F: main (principal.cpp:231)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402F6A: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:395)
+==10306==    by 0x40157F: main (principal.cpp:231)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402CA6: localizador_en_cadena(nodo*, rep_cadena*) (cadena.cpp:285)
+==10306==    by 0x4015E0: main (principal.cpp:236)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x403521: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401DA4: copia_info(rep_info*) (info.cpp:31)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401DB0: copia_info(rep_info*) (info.cpp:33)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28d38 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C32BC2: __strlen_sse2 (vg_replace_strmem.c:460)
+==10306==    by 0x401DBB: copia_info(rep_info*) (info.cpp:33)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28ce0 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C32BD4: __strlen_sse2 (vg_replace_strmem.c:460)
+==10306==    by 0x401DBB: copia_info(rep_info*) (info.cpp:33)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28ce1 is 1 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401DD7: copia_info(rep_info*) (info.cpp:34)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28d38 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x57E0720: __strcpy_sse2_unaligned (in /usr/lib64/libc-2.26.so)
+==10306==    by 0x401DED: copia_info(rep_info*) (info.cpp:34)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28ce0 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 1
+==10306==    at 0x4C32C93: strcpy (vg_replace_strmem.c:510)
+==10306==    by 0x401DED: copia_info(rep_info*) (info.cpp:34)
+==10306==    by 0x403529: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:71)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28ce1 is 1 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x40354E: concatenar(rep_cadena*, rep_cadena*) (uso_cadena.cpp:72)
+==10306==    by 0x401AE6: main (principal.cpp:309)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x40331D: longitud(rep_cadena*) (uso_cadena.cpp:26)
+==10306==    by 0x4018BE: main (principal.cpp:278)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402E50: kesimo(unsigned int, rep_cadena*) (cadena.cpp:344)
+==10306==    by 0x40192C: main (principal.cpp:283)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x4031B9: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:470)
+==10306==    by 0x40194A: main (principal.cpp:284)
+==10306==  Address 0x5b28a70 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400BA3: main (principal.cpp:93)
+==10306== 
+==10306== Invalid write of size 8
+==10306==    at 0x4031CB: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:471)
+==10306==    by 0x40194A: main (principal.cpp:284)
+==10306==  Address 0x5b28a70 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400BA3: main (principal.cpp:93)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E07: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x401864: main (principal.cpp:271)
+==10306==  Address 0x5b287e8 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400B89: main (principal.cpp:92)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E17: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x401864: main (principal.cpp:271)
+==10306==  Address 0x5b287e8 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400B89: main (principal.cpp:92)
+==10306== 
+==10306== Invalid free() / delete / delete[] / realloc()
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x401864: main (principal.cpp:271)
+==10306==  Address 0x5b28790 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400B89: main (principal.cpp:92)
+==10306== 
+==10306== Invalid free() / delete / delete[] / realloc()
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x401864: main (principal.cpp:271)
+==10306==  Address 0x5b287e0 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400B89: main (principal.cpp:92)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x4036FE: cambiar_todos(int, int, rep_cadena*&) (uso_cadena.cpp:106)
+==10306==    by 0x401BA9: main (principal.cpp:321)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x403706: cambiar_todos(int, int, rep_cadena*&) (uso_cadena.cpp:106)
+==10306==    by 0x401BA9: main (principal.cpp:321)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x40376F: cambiar_todos(int, int, rep_cadena*&) (uso_cadena.cpp:110)
+==10306==    by 0x401BA9: main (principal.cpp:321)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x402F81: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x402F89: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402F4B: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:394)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402F6A: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:395)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x4031B9: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:470)
+==10306==    by 0x40368D: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28a70 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400BA3: main (principal.cpp:93)
+==10306== 
+==10306== Invalid write of size 8
+==10306==    at 0x4031CB: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:471)
+==10306==    by 0x40368D: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28a70 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400BA3: main (principal.cpp:93)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x403645: ordenar(rep_cadena*&) (uso_cadena.cpp:92)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x403140: info_cadena(nodo*, rep_cadena*) (cadena.cpp:446)
+==10306==    by 0x402F9E: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 4
+==10306==    at 0x401E46: numero_info(rep_info*) (info.cpp:43)
+==10306==    by 0x402FA6: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:396)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x4031AE: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:469)
+==10306==    by 0x40368D: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid write of size 8
+==10306==    at 0x4031C0: intercambiar(nodo*, nodo*, rep_cadena*&) (cadena.cpp:470)
+==10306==    by 0x40368D: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x4036A3: ordenar(rep_cadena*&) (uso_cadena.cpp:94)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402E9F: siguiente(nodo*, rep_cadena*) (cadena.cpp:365)
+==10306==    by 0x402CA6: localizador_en_cadena(nodo*, rep_cadena*) (cadena.cpp:285)
+==10306==    by 0x402F13: menor_en_cadena(nodo*, rep_cadena*) (cadena.cpp:392)
+==10306==    by 0x403677: ordenar(rep_cadena*&) (uso_cadena.cpp:93)
+==10306==    by 0x401B46: main (principal.cpp:315)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x402A51: liberar_cadena(rep_cadena*&) (cadena.cpp:210)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d90 is 16 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E04: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E14: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E27: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid free() / delete / delete[] / realloc()
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d80 is 0 bytes inside a block of size 24 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x402A74: liberar_cadena(rep_cadena*&) (cadena.cpp:212)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x40217F: insertar_al_final(rep_info*, rep_cadena*&) (cadena.cpp:34)
+==10306==    by 0x400A58: leer_cadena() (principal.cpp:55)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E07: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d38 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid read of size 8
+==10306==    at 0x401E17: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d38 is 8 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid free() / delete / delete[] / realloc()
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28ce0 is 0 bytes inside a block of size 2 free'd
+==10306==    at 0x4C316B8: operator delete[](void*) (vg_replace_malloc.c:621)
+==10306==    by 0x401E22: liberar_info(rep_info*&) (info.cpp:39)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C308B7: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==10306==    by 0x4020E9: leer_info(int) (info.cpp:99)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== Invalid free() / delete / delete[] / realloc()
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x401CDF: main (principal.cpp:337)
+==10306==  Address 0x5b28d30 is 0 bytes inside a block of size 16 free'd
+==10306==    at 0x4C311E8: operator delete(void*) (vg_replace_malloc.c:576)
+==10306==    by 0x401E36: liberar_info(rep_info*&) (info.cpp:40)
+==10306==    by 0x402A63: liberar_cadena(rep_cadena*&) (cadena.cpp:211)
+==10306==    by 0x400F2D: main (principal.cpp:140)
+==10306==  Block was alloc'd at
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+1>cad vacia.
+2>
+3>Insertado al final.
+4>Insertado al final.
+5>Insertado al final.
+6>Insertado al final.
+7>Insertado al final.
+8>cad no vacia.
+9>(1,a)(2,b)(3,c)(4,d)(10,e)
+10>cad ordenada.
+11>Insertado al final.
+12>(1,a)(2,b)(3,c)(4,d)(10,e)(5,e)
+13>cad no ordenada.
+14>Ordenada.
+15>(1,a)(2,b)(3,c)(4,d)(5,e)(10,e)
+16>loc al final.
+17>loc al anterior.
+18>Segmento insertado después de loc.
+19>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+20>(1,a)(1,b)(2,b)(2,c)(3,c)(3,d)(4,d)(4,f)(5,e)(6,f)(7,g)(8,h)(10,e)(10,n)
+21>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+22>No son iguales.
+23>Son iguales.
+24>loc válido.
+25>loc pertenece a cad.
+26>(5,e)
+27>loc en la posición 3.
+28>(3,c)
+29>loc1 no precede a loc.
+30>loc al anterior.
+31>loc al anterior.
+32>loc válido.
+33>loc al siguiente.
+34>loc válido.
+35>(2,b)
+36>loc no es incio de cad.
+37>loc no es final de cad.
+38>loc al anterior.
+39>(1,a)
+40>Longitud: 9
+41>Removido.
+42>(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+43>Localizador no válido.
+44>loc al inicio.
+45>loc es incio de cad.
+46>loc no es final de cad.
+47>Longitud: 8
+48>1 no pertenece a cad.
+49>10 pertenece a cad.
+50>Insertado antes de loc.
+51>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+52>(1,a)(2,b)
+53>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+54>(3,c)(4,d)(5,e)(6,f)
+55>(1,a)(2,b)(7,g)(8,h)(10,e)
+56>Segmento insertado después de loc.
+57>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+58>(3,c)
+59>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+60>loc avanzó hasta el menor.
+61>(2,b)
+62>loc al inicio.
+63>loc avanzó hasta el menor.
+64>(1,a)
+65>loc retrocedió buscando 10.
+66>Localizador no válido.
+67>loc no válido.
+68>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)(1,b)(5,f)
+69>(1,a)(2,b)(3,c)(4,d)(5,e)(6,f)(7,g)(8,h)(10,e)
+70>Intercambio.
+71>Intercambio.
+72>(10,e)(6,f)(3,c)(4,d)(5,e)(2,b)(7,g)(8,h)(1,a)
+73>loc al inicio.
+74>Cambio.
+75>(5,e)(6,f)(3,c)(4,d)(5,e)(2,b)(7,g)(8,h)(1,a)
+76>Cambiados.
+77>(1,e)(6,f)(3,c)(4,d)(1,e)(2,b)(7,g)(8,h)(1,a)
+78>Ordenada.
+79>(1,e)(1,e)(1,a)(2,b)(3,c)(4,d)(6,f)(7,g)(8,h)
+80>Estructuras reiniciadas.
+81>
+82>Fin.
+==10306== 16 bytes in 1 blocks are definitely lost in loss record 2 of 4
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400A62: leer_cadena() (principal.cpp:56)
+==10306==    by 0x400CA9: main (principal.cpp:109)
+==10306== 
+==10306== 16 bytes in 1 blocks are definitely lost in loss record 3 of 4
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x401814: main (principal.cpp:268)
+==10306== 
+==10306== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
+==10306==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10306==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10306==    by 0x402111: leer_info(int) (info.cpp:101)
+==10306==    by 0x400B89: main (principal.cpp:92)
+==10306== 

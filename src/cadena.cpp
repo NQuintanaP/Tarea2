@@ -52,11 +52,12 @@ void insertar_al_final(info_t i, cadena_t &cad){
 void insertar_antes(info_t i, localizador_t loc, cadena_t &cad) {
   nodo *nuevo = new nodo;
   nuevo->dato = i;
-  nuevo->anterior = loc->anterior;
+  nuevo->anterior = anterior(loc,cad);
   nuevo->siguiente = loc;
-  if(!es_inicio_cadena(loc,cad)){
-    loc->anterior->siguiente = nuevo;
+  if(es_inicio_cadena(loc,cad)){
     cad->inicio = nuevo;
+  } else if(!es_inicio_cadena(loc,cad)){
+    loc->anterior->siguiente = nuevo;
   }
   loc->anterior = nuevo;
 }
@@ -122,19 +123,22 @@ cadena_t segmento_cadena(localizador_t desde, localizador_t hasta, cadena_t cad)
  */
 cadena_t separar_segmento(localizador_t desde, localizador_t hasta, cadena_t &cad){
   cadena_t resultado = crear_cadena();
-  resultado->inicio = desde;
-  resultado->final = hasta;
-  if (es_inicio_cadena(desde,cad)) {
-    cad->inicio = hasta->siguiente;
-    hasta->siguiente->anterior = NULL;
-  } else {
-    hasta->siguiente->anterior = desde->anterior;
-  }
-  if (es_final_cadena(hasta,cad)){
-    cad->final = desde->anterior;
-    desde->anterior->siguiente = NULL;
-  } else {
-    desde->anterior->siguiente = hasta->siguiente;
+  if (!es_vacia_cadena(cad)){
+    resultado->inicio = desde;
+    resultado->final = hasta;
+    if (es_inicio_cadena(desde,cad) && es_final_cadena(hasta,cad)){
+      cad->inicio = NULL;
+      cad->final = NULL;
+    } else if (es_inicio_cadena(desde,cad)){
+      cad->inicio = siguiente(hasta,cad);
+      hasta->siguiente->anterior = NULL;
+    } else if (es_final_cadena(hasta,cad)){
+      cad->final = anterior(desde,cad);
+      desde->anterior->siguiente = NULL;
+    } else {
+      desde->anterior->siguiente = hasta->siguiente;
+      hasta->siguiente->anterior = desde->anterior;
+    }
   }
   return resultado;
 }
@@ -153,11 +157,11 @@ cadena_t mezcla(cadena_t c1, cadena_t c2) {
   localizador_t loc1 = inicio_cadena(c1);
   localizador_t loc2 = inicio_cadena(c2);
   while (es_localizador(loc1) || es_localizador(loc2)){
-    if(es_localizador(loc1) && !es_localizador(loc2)){
+    if(!es_localizador(loc2)) {
       insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
       loc1 = siguiente(loc1,c1);
     }
-    else if(!es_localizador(loc1) && es_localizador(loc2)){
+    else if(!es_localizador(loc1)){
       insertar_al_final(copia_info(info_cadena(loc2,c2)),resultado);
       loc2 = siguiente(loc2,c2);
     }
@@ -183,7 +187,9 @@ cadena_t mezcla(cadena_t c1, cadena_t c2) {
   Precondición: localizador_en_cadena(loc, cad).
  */
 void remover_de_cadena(localizador_t &loc, cadena_t &cad){
-  if(es_inicio_cadena(loc,cad)){
+  if(es_final_cadena(loc,cad) && es_inicio_cadena(loc,cad))
+    cad->inicio = cad->final = NULL;
+  else if(es_inicio_cadena(loc,cad)){
     cad->inicio = loc->siguiente;
     loc->siguiente->anterior = NULL;
   } else if (es_final_cadena(loc,cad)) {
@@ -332,14 +338,14 @@ localizador_t kesimo(nat k, cadena_t cad){
     return resultado;
   else {
     nat i = 1;
-    while (cad->inicio != NULL && i<=k) {
+    resultado = inicio_cadena(cad);
+    while (es_localizador(resultado) && i<k) {
       i++;
-      cad->inicio = cad->inicio->siguiente;
+      resultado = siguiente(resultado,cad);
     }
-    if (cad->inicio == NULL)
+    if (resultado == NULL)
       return resultado;
     else {
-      resultado = cad->inicio;
       return resultado;
     }
   }

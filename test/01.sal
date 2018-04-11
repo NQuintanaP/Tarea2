@@ -26,9 +26,9 @@
 26>No son iguales.
 27>No son iguales.
 28>Fin.
-==5712== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
-==5712==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
-==5712==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
-==5712==    by 0x402111: leer_info(int) (info.cpp:101)
-==5712==    by 0x400B89: main (principal.cpp:92)
-==5712== 
+==10281== 18 (16 direct, 2 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==10281==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10281==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10281==    by 0x402111: leer_info(int) (info.cpp:101)
+==10281==    by 0x400B89: main (principal.cpp:92)
+==10281== 

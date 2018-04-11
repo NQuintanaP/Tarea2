@@ -1,0 +1,48 @@
+1>#  prueba de cambiar_en_cadena, intercambiar, concatenar, cambiar_todos.
+2>Insertado al final.
+3>Insertado al final.
+4>Insertado al final.
+5>Insertado al final.
+6>Insertado al final.
+7>loc en la posición 2.
+8>Cambio.
+9>(5,e)
+10>(1,a)(5,e)(5,c)(4,d)(3,e)
+11>Intercambio.
+12>(5,e)(1,a)(5,c)(4,d)(3,e)
+13>Intercambio.
+14>(5,c)(1,a)(5,e)(4,d)(3,e)
+15>Intercambio.
+16>(5,c)(5,e)(1,a)(4,d)(3,e)
+17>Intercambio.
+18>(1,a)(5,e)(5,c)(4,d)(3,e)
+19>Intercambio.
+20>(1,a)(5,e)(5,c)(4,d)(3,e)
+21>(1,a)(5,e)(5,c)(4,d)(3,e)
+22>(1,a)(5,e)(5,c)(4,d)(3,e)(1,b)
+23>(1,a)(5,e)(5,c)(4,d)(3,e)(1,b)(5,f)
+24>Cambiados.
+25>(1,a)(1,e)(1,c)(4,d)(3,e)
+26>Cambiados.
+27>(2,a)(2,e)(2,c)(4,d)(3,e)
+28>Cambiados.
+29>(2,a)(2,e)(2,c)(4,d)(1,e)
+30>Fin.
+==10302== 16 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10302==    by 0x402111: leer_info(int) (info.cpp:101)
+==10302==    by 0x401814: main (principal.cpp:268)
+==10302== 
+==10302== 32 bytes in 2 blocks are definitely lost in loss record 2 of 3
+==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10302==    by 0x40373E: cambiar_todos(int, int, rep_cadena*&) (uso_cadena.cpp:107)
+==10302==    by 0x401BA9: main (principal.cpp:321)
+==10302== 
+==10302== 48 bytes in 3 blocks are definitely lost in loss record 3 of 3
+==10302==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
+==10302==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
+==10302==    by 0x402111: leer_info(int) (info.cpp:101)
+==10302==    by 0x400B89: main (principal.cpp:92)
+==10302== 
