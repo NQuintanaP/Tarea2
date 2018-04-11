@@ -199,6 +199,7 @@ void remover_de_cadena(localizador_t &loc, cadena_t &cad){
     loc->anterior->siguiente = loc->siguiente;
     loc->siguiente->anterior = loc->anterior;
   }
+  liberar_info(loc->dato);
   delete loc;
 }
 

@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <assert.h>
+#include <string.h> // strlen, strcpy, strcmp, strcat
 
 /*
   Devuelve `true' si y sólo si en `cad' hay un elemento cuyo dato numérico es
@@ -22,7 +23,7 @@ bool pertenece(int i, cadena_t cad) {
 nat longitud(cadena_t cad){
   localizador_t loc = inicio_cadena(cad);
   nat cantidad = 0;
-  while (loc != NULL){
+  while (es_localizador(loc)){
     loc = siguiente(loc,cad);
     cantidad++;
   }
@@ -102,10 +103,20 @@ void ordenar(cadena_t &cad){
  */
 void cambiar_todos(int original, int nuevo, cadena_t &cad){
   localizador_t loc = inicio_cadena(cad);
+  // int numero = numero_info(info_cadena(loc,cad));
+
+  // info_t dato = crear_info(numero,frase);
+  // remover_de_cadena(loc,cad);
+  // printf("%i,%s",  numero_info(dato),frase_info(dato));
   while(es_localizador(loc)){
     if (numero_info(info_cadena(loc,cad)) == original){
-      info_t dato = crear_info(nuevo,frase_info(info_cadena(loc,cad)));
-      cambiar_en_cadena(dato,loc,cad);
+      char *frase = new char[strlen(frase_info(info_cadena(loc,cad))) + 1];
+      strcpy(frase, frase_info(info_cadena(loc,cad)));
+      info_t dato = crear_info(nuevo,frase);
+      insertar_antes(dato,loc,cad);
+      loc = anterior(loc,cad);
+      localizador_t aRemover = siguiente(loc,cad);
+      remover_de_cadena(aRemover,cad);
     }
     loc = siguiente(loc,cad);
   }

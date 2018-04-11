@@ -1,7 +1,0 @@
-54a55,60
-> ==10290== 54 (48 direct, 6 indirect) bytes in 3 blocks are definitely lost in loss record 2 of 2
-> ==10290==    at 0x4C301CA: operator new(unsigned long) (vg_replace_malloc.c:334)
-> ==10290==    by 0x401D66: crear_info(int, char*) (info.cpp:23)
-> ==10290==    by 0x402111: leer_info(int) (info.cpp:101)
-> ==10290==    by 0x400B89: main (principal.cpp:92)
-> ==10290== 
