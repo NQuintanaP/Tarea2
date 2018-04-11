@@ -1,3 +1,4 @@
+/* 4882701 */
 
 #include "../include/cadena.h"
 #include "../include/info.h"
@@ -139,8 +140,9 @@ cadena_t separar_segmento(localizador_t desde, localizador_t hasta, cadena_t &ca
       desde->anterior->siguiente = hasta->siguiente;
       hasta->siguiente->anterior = desde->anterior;
     }
-  } else if (es_vacia_cadena(cad))
-      return resultado;
+    desde->anterior = NULL;
+    hasta->siguiente = NULL;
+  }
   return resultado;
 }
 
@@ -188,20 +190,22 @@ cadena_t mezcla(cadena_t c1, cadena_t c2) {
   Precondición: localizador_en_cadena(loc, cad).
  */
 void remover_de_cadena(localizador_t &loc, cadena_t &cad){
-  if(es_final_cadena(loc,cad) && es_inicio_cadena(loc,cad))
-    cad->inicio = cad->final = NULL;
-  else if(es_inicio_cadena(loc,cad)){
-    cad->inicio = loc->siguiente;
-    loc->siguiente->anterior = NULL;
-  } else if (es_final_cadena(loc,cad)) {
-    cad->final = loc->anterior;
-    loc->anterior->siguiente = NULL;
-  } else {
-    loc->anterior->siguiente = loc->siguiente;
-    loc->siguiente->anterior = loc->anterior;
+  if(!es_vacia_cadena(cad)){
+    if(es_final_cadena(loc,cad) && es_inicio_cadena(loc,cad))
+      cad->inicio = cad->final = NULL;
+    else if(es_inicio_cadena(loc,cad)){
+      cad->inicio = loc->siguiente;
+      loc->siguiente->anterior = NULL;
+    } else if (es_final_cadena(loc,cad)) {
+      cad->final = loc->anterior;
+      loc->anterior->siguiente = NULL;
+    } else {
+      loc->anterior->siguiente = loc->siguiente;
+      loc->siguiente->anterior = loc->anterior;
+    }
+    liberar_info(loc->dato);
+    delete loc;
   }
-  liberar_info(loc->dato);
-  delete loc;
 }
 
 /*  Libera la memoria asignada a `cad' y la de todos sus elementos. */

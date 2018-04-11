@@ -1,3 +1,5 @@
+/* 4882701 */
+
 #include "../include/cadena.h"
 #include "../include/info.h"
 

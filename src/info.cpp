@@ -1,3 +1,4 @@
+/* 4882701 */
 /*
   Módulo de implementación de `info_t'.
 
