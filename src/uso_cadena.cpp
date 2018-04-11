@@ -24,8 +24,8 @@ nat longitud(cadena_t cad){
   localizador_t loc = inicio_cadena(cad);
   nat cantidad = 0;
   while (es_localizador(loc)){
-    loc = siguiente(loc,cad);
     cantidad++;
+    loc = siguiente(loc,cad);
   }
   return cantidad;
 }
@@ -64,9 +64,6 @@ cadena_t concatenar(cadena_t c1, cadena_t c2) {
   else{
     localizador_t loc1 = inicio_cadena(c1);
     localizador_t loc2 = inicio_cadena(c2);
-    // while (es_localizador(loc1) || es_localizador(loc2)){
-    //
-    // }
     if(es_localizador(loc1))
       while(es_localizador(loc1)){
         insertar_al_final(copia_info(info_cadena(loc1,c1)),resultado);
@@ -103,11 +100,6 @@ void ordenar(cadena_t &cad){
  */
 void cambiar_todos(int original, int nuevo, cadena_t &cad){
   localizador_t loc = inicio_cadena(cad);
-  // int numero = numero_info(info_cadena(loc,cad));
-
-  // info_t dato = crear_info(numero,frase);
-  // remover_de_cadena(loc,cad);
-  // printf("%i,%s",  numero_info(dato),frase_info(dato));
   while(es_localizador(loc)){
     if (numero_info(info_cadena(loc,cad)) == original){
       char *frase = new char[strlen(frase_info(info_cadena(loc,cad))) + 1];

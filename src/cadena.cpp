@@ -135,11 +135,12 @@ cadena_t separar_segmento(localizador_t desde, localizador_t hasta, cadena_t &ca
     } else if (es_final_cadena(hasta,cad)){
       cad->final = anterior(desde,cad);
       desde->anterior->siguiente = NULL;
-    } else {
+    }else{
       desde->anterior->siguiente = hasta->siguiente;
       hasta->siguiente->anterior = desde->anterior;
     }
-  }
+  } else if (es_vacia_cadena(cad))
+      return resultado;
   return resultado;
 }
 
@@ -362,7 +363,7 @@ localizador_t siguiente(localizador_t loc, cadena_t cad) {
   localizador_t res;
   if (es_final_cadena(loc,cad))
     res = NULL;
-  else
+  else if (!es_final_cadena(loc,cad))
     res = loc->siguiente;
   return res;
 }
@@ -485,7 +486,7 @@ void imprimir_cadena(cadena_t cad){
     printf("\n");
   else{
     localizador_t loc = inicio_cadena(cad);
-    while(loc != NULL){
+    while(es_localizador(loc)){
       int numero = numero_info(info_cadena(loc,cad));
       char *frase = frase_info(info_cadena(loc,cad));
       printf("(%i,%s)", numero, frase);
